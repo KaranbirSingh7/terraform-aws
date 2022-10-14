@@ -25,5 +25,7 @@ output "cluster_name" {
 
 output "export_kubeconfig_command" {
   description = "aws cli command to update local kubeconfig"
-  value       = "aws eks update-kubeconfig --name ${local.cluster_name}"
+  value       = <<EOF
+  "aws eks update-kubeconfig --name ${local.cluster_name}"
+  EOF
 }
