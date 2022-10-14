@@ -6,7 +6,7 @@ variable "eks-cluster-name" {
 
 variable "eks-version" {
   description = "AWS Kubernetes version"
-  default     = 0
+  default     = 1.23
   type        = number
 }
 

@@ -11,24 +11,24 @@ help:						## Show this help
 get:		verify-aws-profile-set 		## Get the terraform modules
 	AWS_PROFILE=${AWS_PROFILE} terraform get
 
-init:		verify-aws-profile-set		
+init:		verify-aws-profile-set
 	AWS_PROFILE=${AWS_PROFILE} terraform init
 
 plan:		verify-aws-profile-set		## Plan the changes to infra.
 	AWS_PROFILE=${AWS_PROFILE} terraform plan
 
 refresh:	verify-aws-profile-set		## Refresh the remote state with existing AWS infra.
-	AWS_PROFILE=${AWS_PROFILE} terraform refresh 
+	AWS_PROFILE=${AWS_PROFILE} terraform refresh
 # -var-file=../../prod/prod.tfvars -var-file=../../common.tfvars
 
 apply:		verify-aws-profile-set		## Apply the changes in plan.
-	AWS_PROFILE=${AWS_PROFILE} terraform apply
+	AWS_PROFILE=${AWS_PROFILE} terraform apply -auto-approve
 
 output:		verify-aws-profile-set		## See the output.
 	AWS_PROFILE=${AWS_PROFILE} terraform output -json
 
 destroy:	verify-aws-profile-set		## Destroy the infra.
-	AWS_PROFILE=${AWS_PROFILE} terraform destroy 
+	AWS_PROFILE=${AWS_PROFILE} terraform destroy
 
 verify-aws-profile-set:
 ifndef AWS_PROFILE
