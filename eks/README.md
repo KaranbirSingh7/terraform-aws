@@ -4,6 +4,7 @@
 
 1. Login with AWS and export current profile name:
     ```shell
+    aws configure
     export AWS_PROFILE=default
     ```
 
@@ -17,7 +18,7 @@
     make plan
     ```
 
-1. Plan changes:
+1. Apply changes:
     ```shell
     make apply
     ```
