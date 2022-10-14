@@ -3,7 +3,7 @@
 
 ## Installation:
 
-1. Install basic utils required for pre-commit
+1. Install basic utils required for pre-commit:
     ```shell
     brew install coreutils tflint
     ```
